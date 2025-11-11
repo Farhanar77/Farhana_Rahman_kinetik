@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-import { productQuantty } from '../helpers/data';
+import { productQuantty , produtName} from '../helpers/data';
 
 export class AddtoCart{
      /**
@@ -26,7 +26,7 @@ export class AddtoCart{
     async cartPageProduct(){
         await expect(this.productRow).toBeVisible();
         await expect(this.productNam).toBeVisible();
-        await expect(this.productNam).toHaveText("Blue Top");
+        await expect(this.productNam).toHaveText(produtName);
         await expect(this.categrytoCart).toBeVisible();
         await expect(this.categrytoCart).toHaveText("Women > Tops");
         await expect(this.cartQuantity).toBeVisible();
